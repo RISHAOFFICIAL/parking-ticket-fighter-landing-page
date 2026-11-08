@@ -646,11 +646,11 @@
                 <td class="val">On your windshield</td>
               </tr>
               <tr>
-                <td class="lab">Fine, paid early</td>
+                <td class="lab">Fine, Detroit Discount</td>
                 <td class="val">$22.50</td>
               </tr>
               <tr>
-                <td class="lab">Fine, after 5 days</td>
+                <td class="lab">Fine, standard</td>
                 <td class="val">$45.00</td>
               </tr>
               <tr class="contest">
@@ -675,22 +675,22 @@
           <div class="math">
             <div class="cell">
               <div class="figure">$22.50</div>
-              <div class="cap">The fine if you pay within 5 days</div>
+              <div class="cap">The fine for registered Detroit plates, paid within 5 days</div>
             </div>
             <div class="cell">
               <div class="figure red">$45</div>
-              <div class="cap">The fine after that. It doubles.</div>
+              <div class="cap">The standard fine, due within 30 days</div>
             </div>
             <div class="cell">
               <div class="figure">5 days</div>
-              <div class="cap">To pay the reduced fine</div>
+              <div class="cap">To pay the reduced fine, registered plates only</div>
             </div>
             <div class="cell">
               <div class="figure red">30 days</div>
               <div class="cap">To contest. Then the window closes.</div>
             </div>
           </div>
-          <p class="math-note">Miss the first date and the discount is gone. <strong>Miss the second and the window closes.</strong></p>
+          <p class="math-note">The $22.50 rate is only for Detroit residents with a plate registered in the City&rsquo;s Detroit Discount program. Miss the first date and the discount is gone. <strong>Miss the second and the window closes.</strong></p>
         </section>
 
         <!-- DETROIT DISCOUNT -->
@@ -704,8 +704,12 @@
           </div>
           <div class="discount">
             <div class="discount-in">
-              <p class="intro">Detroit&rsquo;s <strong>Detroit Discount</strong> program cuts Expired Meter and No Parking fines in half. Register your license plate once and the discount applies.</p>
+              <p class="intro">Detroit&rsquo;s <strong>Detroit Discount</strong> program cuts Expired Meter and No Parking fines in half. Register your license plate once and the discount applies, if you live in the city.</p>
               <ul class="conditions">
+                <li>
+                  <span class="lab">Where you live</span>
+                  <span>You must live in the City of Detroit.</span>
+                </li>
                 <li>
                   <span class="lab">Your plate</span>
                   <span>Your plate must be registered in the City of Detroit.</span>
@@ -737,7 +741,7 @@
           </div>
           <div class="checker">
             <div class="checker-in">
-              <p class="intro">Enter the date printed on your ticket. We will do the same math the app does: your last day to pay the reduced fine, and your last day to file a contest.</p>
+              <p class="intro">Enter the date printed on your ticket. We will do the same math the app does: your last day to pay the reduced fine, and your last day to file a contest. The reduced fine is only for Detroit residents with a plate registered in the City&rsquo;s Detroit Discount program.</p>
               <form class="checker-form" id="calc-form">
                 <div class="field">
                   <label for="issue-date">Date the ticket was issued</label>
@@ -843,7 +847,7 @@
             </div>
             <div class="item">
               <h3>Case check</h3>
-              <p>An honest read on how strong your case is, including when the honest answer is to just pay the $22.50.</p>
+              <p>An honest read on how strong your case is, including when the honest answer is to just pay the $22.50, for Detroit residents with a registered plate.</p>
             </div>
             <div class="item">
               <h3>Statement writer</h3>
@@ -880,7 +884,7 @@
             </details>
             <details>
               <summary>What if I did not pay for parking? <span class="mark" aria-hidden="true">+</span></summary>
-              <div class="answer"><p>The app still checks your case. Signs, markings, meter faults, and errors on the ticket itself can all matter. And if your case is weak, it tells you that straight, so you can pay the $22.50 before it becomes $45.</p></div>
+              <div class="answer"><p>The app still checks your case. Signs, markings, meter faults, and errors on the ticket itself can all matter. And if your case is weak, it tells you that straight, so you can pay the reduced $22.50 fine before it becomes $45, if your plate is registered in the Detroit Discount program and you live in Detroit.</p></div>
             </details>
             <details>
               <summary>How long does it take? <span class="mark" aria-hidden="true">+</span></summary>
@@ -919,7 +923,7 @@
       <div class="closing">
         <p class="kicker">Final notice</p>
         <h2>The clock is running. <span class="red">Your ticket has a deadline.</span></h2>
-        <p>Every day you wait, the discount window shrinks. Run your two dates now, while both of them are still yours, and join the waitlist so you hear the day the app opens.</p>
+        <p>Every day you wait, your deadlines get closer. Run your two dates now, while both of them are still yours, and join the waitlist so you hear the day the app opens.</p>
         <a class="btn" href="#waitlist">Join the waitlist</a>
       </div>
 
@@ -992,7 +996,7 @@
           dEl.className = 'days' + (dDesc.hot ? ' hot' : '');
           document.getElementById('r-discount-sub').textContent =
             dDays >= 0
-              ? 'Pay ' + money(22.50) + ' by this date, not ' + money(45) + '.'
+              ? 'Pay ' + money(22.50) + ' by this date, not ' + money(45) + ', if your plate is registered in the Detroit Discount program and you live in Detroit.'
               : 'The fine has stepped up to ' + money(45) + '.';
 
           var cDesc = describe(cDays, 'The contest window has closed.');
@@ -1007,7 +1011,7 @@
           document.getElementById('two-dates-text').innerHTML =
             'Your ticket carries two deadlines, and they do different jobs. The discount deadline, ' +
             '<strong>' + fmtPlain.format(discount) + '</strong>, is the last day to pay the reduced fine of ' +
-            money(22.50) + '. Miss it and the fine steps up to ' + money(45) + '. The contest deadline, ' +
+            money(22.50) + ', for Detroit residents with a plate registered in the Detroit Discount program. Miss it and the fine steps up to ' + money(45) + '. The contest deadline, ' +
             '<strong>' + fmtPlain.format(contest) + '</strong>, is the last day to file Administrative Review. ' +
             'Miss that one and there is nothing left to file.';
 
