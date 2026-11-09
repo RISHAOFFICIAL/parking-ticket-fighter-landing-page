@@ -1,6 +1,6 @@
-# Parking Ticket Fighter Landing Page
+# Beat the Meter Landing Page
 
-Public landing page for Parking Ticket Fighter, the Detroit parking ticket app.
+Public landing page for Beat the Meter, the Detroit parking ticket app.
 
 - Fight a Detroit parking ticket: snap a photo, case check, statement, packet.
 - Detroit Discount: 50% off Expired Meter and No Parking fines for Detroit residents who register their plate (City of Detroit program).
